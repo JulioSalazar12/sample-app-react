@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-const PrimeraApp = () => {
+const PrimeraApp = ( { saludo } ) => {
 
-    const saludo = 'Primera app';
+    // const saludo = 'Primera app';
 
     return (
         <>
@@ -11,6 +12,14 @@ const PrimeraApp = () => {
         <p>Consequatur, dolor commodi dolorum odio minima cum nostrum porro illum enim laboriosam.</p>
         </>
     )
+}
+
+PrimeraApp.propTypes = {
+    saludo: PropTypes.string.isRequired
+}
+
+PrimeraApp.defaultProps = {
+    saludo: 'Default saludo'
 }
 
 export default PrimeraApp;
